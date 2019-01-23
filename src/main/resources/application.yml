@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: simple-client
+  cloud:
+    config:
+      failFast: true  # if it can't connect to configuration servers the application fails
+      env: default
+#      label: ${EXEC_ENVIRONMENT:local} # what configuration to use for the environment (registry, gateway, etc)
+      #points to configuration server
+      uri: ${CONFIG_SERVER_URI:http://localhost:8888}
